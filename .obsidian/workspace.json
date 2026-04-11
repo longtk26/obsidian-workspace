@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "7e2e825c6f4738e4",
+    "type": "split",
+    "children": [
+      {
+        "id": "f296e5a3edb3b793",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "721579a0bc11e882",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Change Data Capture/Overview CDC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Overview CDC"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4b78cea88b4c2fbe",
+    "type": "split",
+    "children": [
+      {
+        "id": "060a79dabff6dce5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "83a4c1b6c31147ec",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d92a6cf589324620",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "24ee5b3097d5e688",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 209.5
+  },
+  "right": {
+    "id": "4e7b0a2cdf7278d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "896beb5980b37063",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2d670be8363fc2f7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Data structure & algorithm/Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "773fa9a716150b9b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Data structure & algorithm/Untitled.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "2fd11463dba7fa94",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1eebfd9a8ed8055e",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "1037b9d910d658bf",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Data structure & algorithm/Untitled.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "721579a0bc11e882",
+  "lastOpenFiles": [
+    "Change Data Capture/Debezium.md",
+    "Change Data Capture/Overview CDC.md",
+    "Message Queues/RabbitMQ.md",
+    "Message Queues/Kafka.md",
+    "Untitled.canvas",
+    "Websocket/Overview websocket.md",
+    "System design/Overview.md",
+    "Search engine/ElasticSearch.md",
+    "Change Data Capture",
+    "System design",
+    "Data structure & algorithm/Road map.md",
+    "Search engine",
+    "Data structure & algorithm/imgs/roadmap.png",
+    "Data structure & algorithm/imgs",
+    "Websocket/imgs/uri-schemes-ws.png",
+    "Websocket/imgs/web-socket.png",
+    "Websocket/imgs",
+    "Websocket",
+    "AI",
+    "Message Queues",
+    "Welcome.md",
+    "Data structure & algorithm"
+  ]
+}
