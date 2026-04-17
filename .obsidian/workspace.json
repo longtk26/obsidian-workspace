@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f296e5a3edb3b793",
+        "id": "e5cb938854463cfc",
         "type": "tabs",
         "children": [
           {
-            "id": "721579a0bc11e882",
+            "id": "e03336f0db1945ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Change Data Capture/Overview CDC.md",
+                "file": "Message Queues/Kafka.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Overview CDC"
+              "title": "Kafka"
             }
           }
         ]
@@ -183,12 +183,24 @@
       "bases:Create new base": false
     }
   },
-  "active": "721579a0bc11e882",
+  "active": "e03336f0db1945ef",
   "lastOpenFiles": [
-    "Change Data Capture/Debezium.md",
-    "Change Data Capture/Overview CDC.md",
     "Message Queues/RabbitMQ.md",
     "Message Queues/Kafka.md",
+    "Change Data Capture/Overview CDC.md",
+    "Event driven",
+    "Change Data Capture/Debezium.md",
+    "Change Data Capture/imgs/check-kafka-messages.png",
+    "Change Data Capture/imgs/check-elastic-search.png",
+    "Change Data Capture/imgs/chec.png",
+    "Change Data Capture/imgs/configure-basic.png",
+    "Change Data Capture/imgs/choose-connector.png",
+    "Change Data Capture/imgs/consumers.png",
+    "Change Data Capture/imgs/debezium-connector.png",
+    "Change Data Capture/imgs/insert-new-record.png",
+    "Change Data Capture/imgs/kafka-messages.png",
+    "Change Data Capture/imgs/kafka-ui-topics.png",
+    "Change Data Capture/imgs",
     "Untitled.canvas",
     "Websocket/Overview websocket.md",
     "System design/Overview.md",
@@ -197,15 +209,11 @@
     "System design",
     "Data structure & algorithm/Road map.md",
     "Search engine",
-    "Data structure & algorithm/imgs/roadmap.png",
     "Data structure & algorithm/imgs",
-    "Websocket/imgs/uri-schemes-ws.png",
-    "Websocket/imgs/web-socket.png",
     "Websocket/imgs",
     "Websocket",
     "AI",
     "Message Queues",
-    "Welcome.md",
-    "Data structure & algorithm"
+    "Welcome.md"
   ]
 }

@@ -196,7 +196,21 @@ docker compose up -d --build
 	- Kafka: Setting up Kafka to be a place that will receive streaming message changes from debezium connect
 	- Kafka UI: visualize messages, consumer and topics come to Kafka for easy in debugging
 	- The usage of Dockerfile that will help us add more connector to debezium connect. Because below I will show you how to sync from PostgreSQL to ElasticSearch then I will need a connector to stream directly data to ElasticSearch. In your case if doesn't need ElasticSearch you  could remove Dockerfile and use image of debezium connect normally
+
+- After running docker compose successfully
+	- Create `users` table for testing in PostgreSQL
+	- Access Debezium UI at: `http://localhost:8083`
+	- Fill the information follow images below:
+	![[debezium-connector.png]]
 	
+	![[choose-connector.png]]
+	![[configure-basic.png]]
+	![[advance-setting.png]]
+	![[validate and finish.png]]
+	![[success-creating.png]]
+	- Now try to insert a new record to `users` table and access to `http://localhost:8070` (Kafka) UI to view new messages stream to topic on Kafka.
+	![[kafka-ui-topics.png]]
+	![[kafka-messages.png]]
 ## Setup synchronization from PostgreSQL to ElasticSearch
 - Keep above  `docker-compose.yml` for setting up debezium and kafka.
 - Create another `docker-compose-elk.yml` for setting up ElasticSearch and Kibana
@@ -242,59 +256,78 @@ docker compose -f docker-compose-elk.yml up -d --build
 curl --location 'http://localhost:8083/connectors' \
 --header 'Content-Type: application/json' \
 --data '{
-  "name": "elasticsearch-sink-connector",
-  "config": {
-    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
-    "topics": "users",
-    "connection.url": "http://elasticsearch:9200",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "key.converter.schemas.enable": "false",
-    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "value.converter.schemas.enable": "false",
-    "schema.ignore": "true",
-    "key.ignore": "false",
+  "name": "elasticsearch-sink-connector",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "topics": "users",
+    "connection.url": "http://elasticsearch:9200",
 
-  
-    "write.method": "upsert",
-    "behavior.on.null.values": "delete",
-    "transforms": "extractKey,removeDeleted",
-    "transforms.extractKey.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
-    "transforms.extractKey.field": "id",
-    "transforms.removeDeleted.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
-    "transforms.removeDeleted.blacklist": "__deleted",
-    "errors.tolerance": "all",
-    "errors.deadletterqueue.topic.name": "dlq-users",
-    "errors.deadletterqueue.topic.replication.factor": "1"
-  }
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+
+    "schema.ignore": "true",
+    "key.ignore": "false",
+
+    "write.method": "upsert",
+    "behavior.on.null.values": "delete",
+
+    "transforms": "extractKey,removeDeleted",
+    "transforms.extractKey.type": "org.apache.kafka.connect.transforms.ExtractField$Key",
+    "transforms.extractKey.field": "id",
+
+    "transforms.removeDeleted.type": "org.apache.kafka.connect.transforms.ReplaceField$Value",
+    "transforms.removeDeleted.blacklist": "__deleted",
+
+    "errors.tolerance": "all",
+    "errors.deadletterqueue.topic.name": "dlq-users",
+    "errors.deadletterqueue.topic.replication.factor": "1"
+  }
+}'
 ```
 * **PostgreSQL connector**
 ```bash
 curl --location 'http://localhost:8083/connectors' \
 --header 'Content-Type: application/json' \
 --data '{
-  "name": "postgres-source-connector",
-  "config": {
-    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
-    "database.hostname": "postgresdb",
-    "database.port": "5432",
-    "database.user": "postgres",
-    "database.password": "postgres",
-    "database.dbname": "template",
-    "topic.prefix": "users_table",
-    "table.include.list": "public.users",
-    "plugin.name": "pgoutput",
-    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "key.converter.schemas.enable": "false",
-    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "value.converter.schemas.enable": "false",
-    "transforms": "route,unwrap",
-    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
-    "transforms.route.regex": "users_table.public.users",
-    "transforms.route.replacement": "users",
-    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
-    "transforms.unwrap.drop.tombstones": "false",
-    "transforms.unwrap.delete.handling.mode": "rewrite"
-  }
+  "name": "postgres-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgresdb",
+    "database.port": "5432",
+    "database.user": "postgres",
+    "database.password": "postgres",
+    "database.dbname": "template",
+    "topic.prefix": "users_table",
+    "table.include.list": "public.users",
+    "plugin.name": "pgoutput",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "transforms": "route,unwrap",
+    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.route.regex": "users_table.public.users",
+    "transforms.route.replacement": "users",
+    "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+    "transforms.unwrap.drop.tombstones": "false",
+    "transforms.unwrap.delete.handling.mode": "rewrite"
+  }
+}'
 ```
+- After running above 2 curls go to debezium UI for checking connector status and Kafka UI to check a consumer created for streaming data directly to ElasticSearch
+	![[pg-connector.png]]
+	![[consumers.png]]
 - Now just need to run a transaction for CREATE, UPDATE, DELETE in your postgreSQL database and view message of topics `users` on Kafka UI
 - Then check the index `users` of ElasticSearch in devtools of kibana UI.
+- Run search query in Kibana before creating new record 
+	![[search-users-before.png]]
+
+- Insert new record in table `users`
+	![[insert-new-record.png]]
+- Check Kafka UI messages
+	![[check-kafka-messages.png]]
+	
+- Check `users` index in ElasticSearch
+	![[check-elastic-search.png]]
