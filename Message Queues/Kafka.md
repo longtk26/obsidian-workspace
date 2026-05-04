@@ -1,4 +1,4 @@
-**Related documents**
+ **Related documents**
 [[Message Queue]]
 ## What is Kafka
 
