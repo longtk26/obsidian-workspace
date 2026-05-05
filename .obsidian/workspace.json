@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b54959f265287c14",
+        "id": "7d0502643bb65b9b",
         "type": "tabs",
         "children": [
           {
-            "id": "fd2168895aab571d",
+            "id": "acc7ce2c5e3ae140",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -179,13 +179,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "fd2168895aab571d",
+  "active": "83a4c1b6c31147ec",
   "lastOpenFiles": [
-    "Message Queues/Message Queue.md",
+    "Microservices/Message Queues/Message Queue.md",
+    "Microservices/Message Queues/RabbitMQ.md",
+    "Microservices/Message Queues/Kafka.md",
+    "Microservices/gRPC/gRPC.md",
+    "Pasted image 20260505145122.png",
+    "Untitled",
+    "Microservices/gRPC",
+    "Microservices",
     "mnt/d/workspace/my_brain/Backend/Message.md",
     "Untitled.md",
-    "Message Queues/RabbitMQ.md",
-    "Message Queues/Kafka.md",
     "Message Queues/kafka_hermes.md",
     "Message Queues/imgs/producer_broker_consumer_flow.md",
     "mnt/d/workspace/my_brain/Backend",
@@ -207,14 +212,10 @@
     "Change Data Capture/imgs/consumers.png",
     "Change Data Capture/imgs/debezium-connector.png",
     "Change Data Capture/imgs/insert-new-record.png",
-    "Change Data Capture/imgs/kafka-messages.png",
-    "Change Data Capture/imgs",
     "Untitled.canvas",
     "Websocket/Overview websocket.md",
     "System design/Overview.md",
     "Search engine/ElasticSearch.md",
-    "Change Data Capture",
-    "System design",
     "Welcome.md"
   ]
 }
