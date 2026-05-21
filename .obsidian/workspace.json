@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "7d0502643bb65b9b",
+        "id": "21c08e1425eb3137",
         "type": "tabs",
         "children": [
           {
-            "id": "acc7ce2c5e3ae140",
+            "id": "8b2189ab43cf17d8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "AI/Knowledge graph.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Knowledge graph"
             }
           }
         ]
@@ -179,30 +183,33 @@
       "bases:Create new base": false
     }
   },
-  "active": "83a4c1b6c31147ec",
+  "active": "8b2189ab43cf17d8",
   "lastOpenFiles": [
+    "Wiki Engineer.md",
+    "AI/Knowledge graph.md",
+    "CLAUDE.md",
+    "AI/Knowledge graph.md.tmp.58757.1daa9d59874d",
+    "Index.md.tmp.59110.62b016c84a19",
+    "CLAUDE.md.tmp.59110.98fec1b2a523",
+    "Untitled.md",
+    "AI/Untitled",
+    "Untitled",
+    "AI",
+    "Microservices/gRPC/gRPC.md",
+    "Microservices/Message Queues/Kafka.md",
     "Microservices/Message Queues/Message Queue.md",
     "Microservices/Message Queues/RabbitMQ.md",
-    "Microservices/Message Queues/Kafka.md",
-    "Microservices/gRPC/gRPC.md",
     "Pasted image 20260505145122.png",
-    "Untitled",
     "Microservices/gRPC",
     "Microservices",
     "mnt/d/workspace/my_brain/Backend/Message.md",
-    "Untitled.md",
     "Message Queues/kafka_hermes.md",
     "Message Queues/imgs/producer_broker_consumer_flow.md",
     "mnt/d/workspace/my_brain/Backend",
     "mnt/d/workspace/my_brain",
-    "mnt/d/workspace",
-    "mnt/d",
-    "mnt",
     "Data structure & algorithm/Road map.md",
-    "Message Queues/imgs",
     "Data structure & algorithm/imgs/roadmap.png",
     "Change Data Capture/Overview CDC.md",
-    "Event driven",
     "Change Data Capture/Debezium.md",
     "Change Data Capture/imgs/check-kafka-messages.png",
     "Change Data Capture/imgs/check-elastic-search.png",
