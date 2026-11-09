@@ -1,5 +1,5 @@
 **Implementation**
-[[Kafka]]
+[[Microservices/Message Queues/Kafka]]
 [[RabbitMQ]]
 
 ## What is message queue?

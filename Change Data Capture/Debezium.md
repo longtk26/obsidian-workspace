@@ -1,7 +1,7 @@
 **Related documents**
 [[Overview CDC]]
 [[ElasticSearch]]
-[[Kafka]]
+[[Microservices/Message Queues/Kafka]]
 ## What is debezium
 Debezium is an open source project that provides a low latency data streaming platform for change data capture (CDC). Set up and configure Debezium to monitor our databases, and then our applications consume events for each row-level change made to the database.
 

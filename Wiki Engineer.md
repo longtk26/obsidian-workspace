@@ -5,6 +5,11 @@
 |------|---------|
 | [[Knowledge graph]] | What a knowledge graph is, how it works, and comparison with grep-based search |
 
+## Databases
+| Note | Summary |
+|------|---------|
+| [[Table Partitioning]] | Types of partitioning (Range, List, Hash, Composite), step-by-step implementation, partition pruning, and best practices for scaling PostgreSQL |
+
 ## Change Data Capture
 | Note | Summary |
 |------|---------|
@@ -27,8 +32,13 @@
 | Note | Summary |
 |------|---------|
 | [[Message Queue]] | Core concepts: producers, consumers, brokers; point-to-point vs pub/sub; message routing; dead letter queues and prioritization |
-| [[Kafka]] | Kafka architecture: topics, partitions, brokers, consumer groups; how data flows through the cluster |
+| [[Microservices/Message Queues/Kafka]] | Kafka architecture: topics, partitions, brokers, consumer groups; how data flows through the cluster |
 | [[RabbitMQ]] | Core components: exchanges (direct, fanout, topic, headers), bindings, routing keys; point-to-point, pub/sub, and request/reply patterns |
+
+## Devops
+| Note | Summary |
+|------|---------|
+| [[Reverse Proxy & Forward Proxy]] | Forward vs reverse proxy concepts, key differences, use cases (load balancing, SSL termination, caching, security), and popular tools (Nginx, Traefik, HAProxy) |
 
 ## Search Engine
 | Note | Summary |
